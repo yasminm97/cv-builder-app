@@ -4,6 +4,7 @@
       <v-col cols="12" md="4">
         <Dashboard v-on:updateData="updateData($event)" />
       </v-col>
+
       <v-col cols="12" md="8">
         <ResumeDisplay v-bind:resumeData="resumeData" />
       </v-col>
@@ -12,40 +13,40 @@
 </template>
 
 <script>
-import Dashboard from './components/Dashborad.vue'
-import ResumeDisplay from './components/ResumeDisplay.vue'
+import Dashboard from "./components/Dashborad.vue";
+import ResumeDisplay from "./components/ResumeDisplay.vue";
 
 export default {
   components: {
     Dashboard,
-    ResumeDisplay
+    ResumeDisplay,
   },
   data() {
     return {
       resumeData: {
-        name: '',
-        title: '',
-        email: '',
-        phone: '',
-        summary: '',
+        name: "",
+        title: "",
+        email: "",
+        phone: "",
+        summary: "",
         skills: [],
-        experirences: []
-      }
-    }
+        experirences: [],
+      },
+    };
   },
   methods: {
     updateData(data) {
       this.resumeData = data;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style scoped>
-  #app {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: left;
-    color: #2c3e50;
-    margin: 0;
-    padding: 0;
-  }
+#app {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
 </style>
